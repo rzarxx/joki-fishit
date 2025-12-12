@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0f172a;
+  color: white;
+  font-family: 'Rajdhani', sans-serif; /* Font modern gaming (baca lebih enak) */
+  overflow-x: hidden;
+}
+
+/* Judul tetap 8-bit biar ikonik */
+.font-pixel {
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Efek Layar TV Tabung (CRT) */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Scrollbar Keren */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 10px; }
